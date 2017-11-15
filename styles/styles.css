@@ -135,7 +135,13 @@ text-align: center;
 
 
 .hilighted-image {
-  border: 4px solid #952a5b;
+  border: 4px solid  #c4ad19 ;
   box-shadow: 20px 8px 8px black;
 
+}
+
+.bold {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 1.4em;
 }
