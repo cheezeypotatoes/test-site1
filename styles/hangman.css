@@ -16,7 +16,7 @@
 div#left {
     /*border: 3px solid black;*/
     float: left;
-    width: 30vw;
+    width: 300px;
     /*background-color: hsla(180, 50%, 50%, 0.3);*/
     /*background-color: lemonchiffon;*/
     background-image: url(../images/background1.jpeg);
@@ -49,6 +49,7 @@ p#lettersGuessed {
 
 .flexBox {
   flex-flow: row;
+  display: flex;
 }
 
 #right a {
