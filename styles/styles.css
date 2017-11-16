@@ -168,3 +168,22 @@ text-align: center;
   text-align: center;
   margin: 5px;
 }
+
+.bird-watcher {
+  background: rgba(  222, 239, 242 , .5);
+  justify-content: center;
+  display: flex;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 20px 8px 8px black;
+
+
+}
+
+.bird-watcher div {
+  flex-grow: 1;
+  font-family: 'Spectral SC', serif;
+  font-size: 1.2em;
+  width: auto;
+}
