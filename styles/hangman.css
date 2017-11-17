@@ -2,16 +2,35 @@
   box-sizing: border-box;
 }
 
+h2 {
+  color: white;
+}
+
+h1  {
+  color: white;
+}
+
+a {
+  color:     #38508d  ;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding-right: 10px;
+}
+
 
 
 
 div#left {
-  background-image: url(../images/gallows.jpg);
+  background-image: url(../images/hang-man.jpg);
+  width: 500px;
+  height: 1000px;
 }
 
 
 div#right {
   background-image: url(../images/gallows.jpg);
+  width: 900px;
+
 }
 
 

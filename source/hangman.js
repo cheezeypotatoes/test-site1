@@ -1,10 +1,10 @@
-var words = ['jedi', 'lightsaber', 'empire', 'vader', 'skywalker', 'yoda', 'clones', 'kenobi', 'stormtrooper', 'padme', 'palpatine', 'kamino', 'rebels', 'sidious', 'chewbacca', 'tatooine', 'naboo', 'coruscaunt', 'xwing', 'zuckuss'];
-var randomWord = "";
-var letter = "";
-var result = "";
-var checkIndex = 0;
-var joinArr = ''
-var attemptsLeft = 5;
+let words = ['jedi', 'lightsaber', 'empire', 'vader', 'skywalker', 'yoda', 'clones', 'kenobi', 'stormtrooper', 'padme', 'palpatine', 'kamino', 'rebels', 'sidious', 'chewbacca', 'tatooine', 'naboo', 'coruscaunt', 'xwing', 'zuckuss']
+let randomWord = ""
+let letter = ""
+let result = ""
+let checkIndex = 0
+let joinArr = ''
+let attemptsLeft = 6
 let start = document.querySelector('#start')
 let submitLetter = document.querySelector('#submitLetter')
 let letterGuess = document.querySelector('#letter')
@@ -42,7 +42,7 @@ function gameRun () {
  parentElement.appendChild(welcomeMessage)
  welcomeMessage.textContent = 'Welcome: ' + playerName
  list[0].textContent = 'Guess a Letter'
- list[1].textContent = 'Guesses Left: 5'
+ list[1].textContent = 'Guesses Left: 6'
  playerInput.value = ''
  chooseWord ()
  blanksFromAnswer(randomWord)
@@ -51,12 +51,12 @@ function gameRun () {
 
 function gameReset() {
   document.getElementById("letter").disabled = false
-  list[0].textContent = 'Guess a Letter'
-  list[1].textContent = 'Guesses Left: 5'
+  list[0].textContent = ''
+  list[1].textContent = ''
   joinArr = ''
   result = ''
   playerName = ''
-  attemptsLeft = 5
+  attemptsLeft = 6
   let welcomeMessage = document.querySelector('h1')
   welcomeMessage.textContent = ''
   lettersGuessed.innerHTML = ''
@@ -65,7 +65,7 @@ function gameReset() {
 
 
 function chooseWord () {
-   randomWord = words[Math.floor(Math.random() * words.length)];
+   randomWord = words[Math.floor(Math.random() * words.length)]
    return randomWord
 }
 
@@ -82,19 +82,19 @@ function blanksFromAnswer ( answerWord ) {
 function chooseLetter () {
   letter = letterGuess.value
   letterGuess.value = ''
-  checkLetter (letter, result, randomWord);
+  checkLetter (letter, result, randomWord)
 }
 
 
 function showProgress () {
-  document.querySelector('.progressHolder').innerHTML = joinArr;
+  document.querySelector('.progressHolder').innerHTML = joinArr
 }
 
 
 function checkLetter (letter, shown, answer) {
   lettersGuessed.innerHTML += letter.toUpperCase()
   if(answer.indexOf(letter) === -1) {
-    isWrong = true
+    // isWrong = true
     attemptsLeft --
     list[0].textContent = 'INCORRECT!'
     list[1].textContent = 'Guesses Left: ' + attemptsLeft
@@ -105,13 +105,13 @@ function checkLetter (letter, shown, answer) {
     }
   } else {
   list[0].textContent = 'CORRECT!'
-  let arr = shown.split("");
-  let i = -1;
+  let arr = shown.split("")
+  let i = -1
   do {
-    i = answer.indexOf(letter, ++i);
-    arr[i] = letter;
+    i = answer.indexOf(letter, ++i)
+    arr[i] = letter
   } while (i != -1)
-      joinArr = arr.join("");
+      joinArr = arr.join("")
       // nextLetter(joinArr);
       display.innerHTML = joinArr
       if(joinArr === randomWord) {
@@ -119,6 +119,6 @@ function checkLetter (letter, shown, answer) {
         gameReset()
         return alert('yes the word was ' + randomWord + ' Good job ' + playerName + ' you won!')
       }
-    return joinArr;
+    return joinArr
   }
 }

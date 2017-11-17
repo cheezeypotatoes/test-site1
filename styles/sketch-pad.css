@@ -1,10 +1,14 @@
 body {
   /*background-color:  #DAF7A6 ;*/
-  background-image: url(../images/background1.jpeg);
+  background-image: url(../images/sketch-pad.jpg);
 }
 
 a {
   float: right;
+  color:  #072a6d ;
+  font-size: 1.2em;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 #app-container {
@@ -22,13 +26,16 @@ a {
   color: white;
   background-color: white;
   /*border: 1px solid black;*/
-  /*font-size: 25px;*/
+
 }
 
 .welcome {
+  background: rgba( 222, 239, 242 , .5);
   padding-top: 25px;
   padding-bottom: 25px;
-  color: white;
+  color:    black   ;
+  font-size: 1.3em;
+  font-weight: bold;
 
 
 }
