@@ -1,8 +1,6 @@
-console.log('Script Loaded')
 let img = document.querySelectorAll('.images-container img')
 let aboutMsg = document.querySelectorAll('.about-container')
 let isBold = false
-
 
 for(let i = 0; i < img.length; i++) {
 
@@ -16,39 +14,34 @@ for(let i = 0; i < img.length; i++) {
     img[i].classList.remove('hilighted-image')
   })
 
+  //click listener to display larger version of thumbnail.
   img[i].addEventListener('click', function(e) {
     displayImage(this.src, this.alt)
   })
 }
 
+//Adds effects to About box when clicked
 for(let i2 = 0; i2 < aboutMsg.length; i2++) {
   console.log(aboutMsg[i2])
   aboutMsg[i2].addEventListener('click', function (e) {
-
     if(isBold) {
-      //code to remove class
-      // aboutMsg[i2].classList.remove('bold')
+      //code to remove class and toggle isBold
       this.classList.remove('bold')
       isBold = !isBold
-      // console.log(aboutMsg[i2] + ' should be false here, real value is ' + isBold)
     } else {
-      // code to add class
-      // aboutMsg[i2].classList.add('bold')
+      // code to add class and toggle isBold
       this.classList.add('bold')
       isBold = !isBold
-      // console.log(aboutMsg[i2] + ' should be true here, real value is ' + isBold)
     }
   })
 }
 
 function displayImage(image, alt) {
-
   //while loop checks for previous img and deletes it before dislplaying next img clicked.
   var displayImage = document.querySelector(".display-image");
     while (displayImage.hasChildNodes()) {
         displayImage.removeChild(displayImage.firstChild);
     }
-
   //creates img in div id display of the img clicked
   var newImage = document.createElement("IMG");
   newImage.setAttribute("src", image);
