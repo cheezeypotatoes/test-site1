@@ -9,6 +9,13 @@ button {
   font-size: 40px;
 }
 
+a {
+  color: #c4ad19;
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
 .flex-container {
     display:flex;
     flex-direction: row;

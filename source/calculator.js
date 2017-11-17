@@ -63,20 +63,20 @@ for (let i = 0; i < number.length; i++) {
 for (let i2 = 0; i2 < operators.length; i2++) {
   operators[i2].addEventListener('click', (e) => {
     console.log(operators[i2].value);
-    if(display.innerHTML === '') {
+    if(display.innerHTML === '0'  || display.innerHTML === '' && operators[i2].value === '-') {
+      display.innerHTML = ''
       display.textContent += operators[i2].value
     } else {
 
       if(num1 !== 0) {
-        display.innerHTML = ''
         num1 = operate(op, num1, num2)
-        console.log(num1);
+
       }
         else
         num1 = num2
         display.innerHTML = ''
         op = operators[i2].value
-      }
+    }
   })
 }
 
