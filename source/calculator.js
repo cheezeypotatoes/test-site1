@@ -70,8 +70,8 @@ for (let i2 = 0; i2 < operators.length; i2++) {
 
       if(num1 !== 0) {
         num1 = operate(op, num1, num2)
-
       }
+      
         else
         num1 = num2
         display.innerHTML = ''
