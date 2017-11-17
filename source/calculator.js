@@ -43,6 +43,7 @@ let number = document.querySelectorAll('.number')
 let operators = document.querySelectorAll('.operator')
 let equals = document.querySelector('.equal')
 let clear = document.querySelector('.clear')
+display.innerHTML = '0'
 let op = ''
 let num2 = 0
 let num1 = 0
@@ -50,6 +51,9 @@ let num1 = 0
 
 for (let i = 0; i < number.length; i++) {
   number[i].addEventListener('click', (e) => {
+    if(display.innerHTML === '0') {
+      display.innerHTML = ''
+    }
     display.textContent += number[i].value
     num2 = Number(display.innerHTML)
   })
@@ -87,5 +91,5 @@ equals.addEventListener('click', (e) => {
 clear.addEventListener('click', (e) => {
   num1 = 0
   num2 = 0
-  display.innerHTML = ''
+  display.innerHTML = '0'
 })
