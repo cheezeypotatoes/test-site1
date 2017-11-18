@@ -72,6 +72,8 @@ text-align: center;
   font-family: 'Quicksand', sans-serif;
   margin-bottom: 75px;
   font-size: 1.3em;
+  font-weight: bold;
+  color: #f7e9ee;
 }
 
 
@@ -147,6 +149,7 @@ text-align: center;
   margin-bottom: 250px;
   display: flex;
   flex-wrap: wrap;
+  /*font-family: 'Quicksand', sans-serif;*/
 }
 
 .tile {
@@ -155,10 +158,11 @@ text-align: center;
   /*height: 250px;*/
   margin: 20px;
   background: rgba(  222, 239, 242 , .2);
-  font-family: 'Spectral SC', serif;
+  font-family: 'Quicksand', sans-serif;
   box-shadow: 20px 8px 8px black;
   border-radius: 5px;
   color: black;
+  font-weight: bold;
 
 }
 
@@ -183,13 +187,15 @@ text-align: center;
   margin: 20px;
   border-radius: 5px;
   box-shadow: 20px 8px 8px black;
+  font-weight: bold;
+  color: #f7e9ee;
 
 
 }
 
 .bird-watcher div {
   flex-grow: 1;
-  font-family: 'Spectral SC', serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.2em;
   width: auto;
 }

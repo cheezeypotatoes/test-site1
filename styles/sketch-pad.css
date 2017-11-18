@@ -3,12 +3,16 @@ body {
   background-image: url(../images/sketch-pad.jpg);
 }
 
-a {
+.projects a {
   float: right;
   color:  #072a6d ;
   font-size: 1.2em;
   text-decoration: none;
   font-weight: bold;
+}
+
+input {
+  width: 65px;
 }
 
 #app-container {
@@ -18,8 +22,17 @@ a {
   border: 2px solid black;
 }
 
+.grid-lines {
+  border: 1px solid black;
+}
+
 .flex-container {
   flex-grow: 1;
+
+}
+
+.tool-bar {
+  padding-bottom: 20px;
 }
 
 .flex-item {
@@ -27,17 +40,25 @@ a {
   background-color: white;
   /*border: 1px solid black;*/
 
+
 }
 
 .welcome {
-  background: rgba( 222, 239, 242 , .5);
+  background: rgba( 222, 239, 242 , .7);
   padding-top: 25px;
   padding-bottom: 25px;
-  color:    black   ;
+  color: black;
   font-size: 1.3em;
   font-weight: bold;
 
 
+}
+
+.welcome a {
+  color:  #072a6d ;
+  font-size: 1.2em;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .black {
